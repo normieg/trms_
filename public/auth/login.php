@@ -3,6 +3,7 @@ require_once __DIR__ . '/../../app/dbh/db.inc.php';
 require_once __DIR__ . '/../assets/tailwind-classes/classes.php';
 ?>
 
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +15,7 @@ require_once __DIR__ . '/../assets/tailwind-classes/classes.php';
 
     <div class="flex items-center justify-center w-full">
         <div class="<?php echo $loginStyle['form_container']; ?>">
-            <form action="/../../app/auth-handler/login-handler.php" method="POST">
+            <form action="/app/auth-handler/login-handler.php" method="POST">
                 <div class="<?php echo $loginStyle['logoWrapper']; ?>">
                     <!-- Logo on the left -->
                     <img src="../assets/images/filstarlogo.png" alt="Logo" class="<?php echo $loginStyle['logo']; ?> ">
