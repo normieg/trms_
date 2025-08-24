@@ -1,7 +1,8 @@
+<?php $base = (strpos($_SERVER['SCRIPT_NAME'], '/admin/') !== false) ? '..' : '.'; ?>
 <aside class="bg-white w-full md:w-64 border-b md:border-b-0 md:border-r" aria-label="Sidebar">
   <nav class="p-4">
     <ul class="flex md:flex-col space-x-4 md:space-x-0 md:space-y-2">
-      <li><a href="/admin/dashboard.php" class="block px-2 py-1 rounded bg-blue-50 text-blue-600">Dashboard</a></li>
+      <li><a href="<?= $base ?>/admin/dashboard.php" class="block px-2 py-1 rounded bg-blue-50 text-blue-600">Dashboard</a></li>
       <li><a href="#" class="block px-2 py-1 rounded text-gray-700">Users</a></li>
       <li><a href="#" class="block px-2 py-1 rounded text-gray-700">Trucks</a></li>
       <li><a href="#" class="block px-2 py-1 rounded text-gray-700">Parts &amp; Inventory</a></li>
