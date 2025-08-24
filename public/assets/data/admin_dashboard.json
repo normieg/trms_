@@ -1,0 +1,52 @@
+{
+  "kpis": {
+    "fleetSize": 58,
+    "inServicePct": 86,
+    "trucksInRepair": 4,
+    "mtdCost": 427500,
+    "qoqChangePct": -8.4,
+    "mtdDowntimeHrs": 112
+  },
+  "pendingPRs": [
+    {"id":1,"prNo":"PR-2025-00123","requesterName":"J. Dela Cruz","itemsCount":3,"estTotal":48500,"createdAt":"2025-08-17T02:10:00Z"},
+    {"id":2,"prNo":"PR-2025-00124","requesterName":"M. Santos","itemsCount":1,"estTotal":12500,"createdAt":"2025-08-12T08:35:00Z"}
+  ],
+  "alerts":[
+    {"id":1,"truckPlate":"ABC-1234","severity":"red","message":"MoM cost +42%","createdAt":"2025-08-22T03:10:00Z"},
+    {"id":2,"truckPlate":"XYZ-9876","severity":"amber","message":"Repairs >5 in 90d","createdAt":"2025-08-21T11:00:00Z"}
+  ],
+  "monthlyCosts":[
+    {"month":"2024-09","total":210000,"parts":110000,"labor":100000},
+    {"month":"2024-10","total":195000,"parts":90000,"labor":105000},
+    {"month":"2024-11","total":205000,"parts":100000,"labor":105000},
+    {"month":"2024-12","total":225000,"parts":120000,"labor":105000},
+    {"month":"2025-01","total":215000,"parts":110000,"labor":105000},
+    {"month":"2025-02","total":220000,"parts":115000,"labor":105000},
+    {"month":"2025-03","total":230000,"parts":125000,"labor":105000},
+    {"month":"2025-04","total":240000,"parts":135000,"labor":105000},
+    {"month":"2025-05","total":245000,"parts":140000,"labor":105000},
+    {"month":"2025-06","total":250000,"parts":145000,"labor":105000},
+    {"month":"2025-07","total":255000,"parts":150000,"labor":105000},
+    {"month":"2025-08","total":235000,"parts":130000,"labor":105000}
+  ],
+  "rankings": {
+    "highestCost":[
+      {"rank":1,"truckPlate":"ABC-1234","model":"Isuzu NPR","value":182000},
+      {"rank":2,"truckPlate":"QWE-2233","model":"Fuso Canter","value":164000}
+    ],
+    "mostRepairs":[
+      {"rank":1,"truckPlate":"XYZ-9876","model":"Hyundai HD65","value":9},
+      {"rank":2,"truckPlate":"LMN-4455","model":"Isuzu NQR","value":8}
+    ]
+  },
+  "lowStock":[
+    {"sku":"BRK-PA-001","name":"Brake Pad Set","onHand":6,"minLevel":10,"locations":["Main","Bin A3"]},
+    {"sku":"FLT-OL-010","name":"Oil Filter","onHand":12,"minLevel":25,"locations":["Main","Bin B1"]}
+  ],
+  "activity":[
+    {"id":1,"icon":"ticket","text":"Ticket #1456 created for ABC-1234","timestamp":"2025-08-22T08:30:00Z"},
+    {"id":2,"icon":"wo","text":"WO #778 moved to In Progress","timestamp":"2025-08-22T09:10:00Z"},
+    {"id":3,"icon":"pr","text":"PR-2025-00123 submitted for approval","timestamp":"2025-08-21T15:00:00Z"}
+  ],
+  "thresholds": {"costMoM":"30","repairs90d":"5","downtime30dHrs":"40"}
+}

@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+<header class="bg-white shadow p-4 flex items-center justify-between">
+  <h1 class="font-semibold">Admin Dashboard</h1>
+</header>
+<div class="flex flex-col md:flex-row">
