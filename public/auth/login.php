@@ -1,15 +1,27 @@
 <?php
 require_once __DIR__ . '/../../app/dbh/db.inc.php';
 require_once __DIR__ . '/../assets/tailwind-classes/classes.php';
+
+// Start a session for CSRF token handling
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    session_start();
+}
+
+// Mint a CSRF token if one doesn't exist
+if (empty($_SESSION['csrf'])) {
+    $_SESSION['csrf'] = bin2hex(random_bytes(32));
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Login</title>
 </head>
+
 <body class="<?php echo $loginStyle['container']; ?>">
     <div class="<?php echo $loginStyle['card']; ?>">
         <div class="<?php echo $loginStyle['header']; ?>">
@@ -20,11 +32,21 @@ require_once __DIR__ . '/../assets/tailwind-classes/classes.php';
             </div>
         </div>
 
-        <h2 class="<?php echo $loginStyle['heading']; ?>">Sign in to your account</h2>
+        <h2 class="<?php echo $loginStyle['heading']; ?>">Log in to your account</h2>
 
-        <form action="/app/auth-handler/login-handler.php" method="POST" class="<?php echo $loginStyle['form']; ?>">
-            <input type="text" name="username" placeholder="System ID" class="<?php echo $loginStyle['form_input']; ?>" required>
-            <input type="password" name="password" placeholder="Password" class="<?php echo $loginStyle['form_input']; ?>" required>
+        <form action="/trms/app/auth-handler/login-handler.php" method="POST" class="<?php echo $loginStyle['form']; ?>">
+            <!-- Hidden CSRF token field -->
+            <input type="hidden" name="csrf" value="<?= htmlspecialchars($_SESSION['csrf'], ENT_QUOTES, 'UTF-8') ?>">
+
+            <!-- Username input -->
+            <input type="text" name="username" placeholder="Enter your username"
+                class="<?php echo $loginStyle['form_input']; ?>" required>
+
+            <!-- Password input -->
+            <input type="password" name="password" placeholder="Enter your password"
+                class="<?php echo $loginStyle['form_input']; ?>" required>
+
+            <!-- Submit button -->
             <button type="submit" class="<?php echo $loginStyle['submit_button']; ?>">Login</button>
         </form>
 
@@ -33,4 +55,5 @@ require_once __DIR__ . '/../assets/tailwind-classes/classes.php';
         </div>
     </div>
 </body>
+
 </html>

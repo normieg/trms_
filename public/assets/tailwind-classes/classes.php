@@ -7,10 +7,11 @@ $loginStyle = [
     'card'           => 'w-full max-w-md bg-white/80 backdrop-blur-lg rounded-xl shadow-lg p-8',
 
     // Header
-    'header'        => 'flex items-center space-x-4 mb-6',
-    'logo'          => 'h-12 w-auto',
+    'header'        => 'flex flex-col items-center text-center mb-6',
+    'logo'          => 'h-12 w-auto mb-3',
     'logoTitle'     => 'text-2xl font-bold text-gray-800',
     'logoSubtitle'  => 'text-sm text-gray-500',
+
 
     // Form
     'heading'       => 'text-lg font-medium text-gray-700 text-center mb-6',

@@ -58,7 +58,12 @@ require_once __DIR__ . '/../includes/sidebar.php';
       <div class="overflow-x-auto">
         <table id="rank-high" class="min-w-full text-sm">
           <thead class="bg-gray-50 text-left text-xs uppercase">
-            <tr><th class="p-2">#</th><th class="p-2">Plate</th><th class="p-2">Model</th><th class="p-2 text-right">Cost</th></tr>
+            <tr>
+              <th class="p-2">#</th>
+              <th class="p-2">Plate</th>
+              <th class="p-2">Model</th>
+              <th class="p-2 text-right">Cost</th>
+            </tr>
           </thead>
           <tbody></tbody>
         </table>
@@ -69,7 +74,12 @@ require_once __DIR__ . '/../includes/sidebar.php';
       <div class="overflow-x-auto">
         <table id="rank-repairs" class="min-w-full text-sm">
           <thead class="bg-gray-50 text-left text-xs uppercase">
-            <tr><th class="p-2">#</th><th class="p-2">Plate</th><th class="p-2">Model</th><th class="p-2 text-right">Repairs</th></tr>
+            <tr>
+              <th class="p-2">#</th>
+              <th class="p-2">Plate</th>
+              <th class="p-2">Model</th>
+              <th class="p-2 text-right">Repairs</th>
+            </tr>
           </thead>
           <tbody></tbody>
         </table>
