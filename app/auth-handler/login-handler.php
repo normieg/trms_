@@ -116,7 +116,7 @@ $_SESSION['role'] = $user['role'];
 
 // Role-based redirect mapping (strict allowlist)
 $roleRedirects = [
-    'admin'    => '/trms/public/admin/admin-dashboard.php',
+    'admin'    => '/trms/public/admin/menus/admin-dashboard/admin-dashboard.php',
     'staff'    => '/trms/public/staff/home.php',
     'mechanic' => '/trms/public/mechanic/workbench.php',
 ];
