@@ -22,7 +22,7 @@ require_once __DIR__ . '/../assets/tailwind-classes/classes.php';
 
         <h2 class="<?php echo $loginStyle['heading']; ?>">Sign in to your account</h2>
 
-        <form action="/app/auth-handler/login-handler.php" method="POST" class="<?php echo $loginStyle['form']; ?>">
+        <form action="../../app/auth-handler/login-handler.php" method="POST" class="<?php echo $loginStyle['form']; ?>">
             <input type="text" name="username" placeholder="System ID" class="<?php echo $loginStyle['form_input']; ?>" required>
             <input type="password" name="password" placeholder="Password" class="<?php echo $loginStyle['form_input']; ?>" required>
             <button type="submit" class="<?php echo $loginStyle['submit_button']; ?>">Login</button>
