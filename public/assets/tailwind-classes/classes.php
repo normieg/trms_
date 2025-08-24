@@ -1,22 +1,21 @@
 <?php
 
+// Tailwind CSS classes for the login page
 $loginStyle = [
-    'container' => 'flex items-center justify-center min-h-screen px-4 py-12 sm:px-6 lg:px-8 bg-gray-50',
-    'form_container' => 'rounded-lg shadow-2xl w-full max-w-md bg-white p-8 sm:p-10',
-    'form_input' => 'w-full p-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 transition duration-200',
+    // Page layout
+    'container'      => 'min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-blue-100 p-4',
+    'card'           => 'w-full max-w-md bg-white/80 backdrop-blur-lg rounded-xl shadow-lg p-8',
 
+    // Header
+    'header'        => 'flex items-center space-x-4 mb-6',
+    'logo'          => 'h-12 w-auto',
+    'logoTitle'     => 'text-2xl font-bold text-gray-800',
+    'logoSubtitle'  => 'text-sm text-gray-500',
 
-
-    'submit_button' => 'w-full p-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200',
-
-
-    'forgot_link' => 'text-blue-500 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-300',
-    'heading' => 'text-lg font-semibold text-gray-800 mb-4',
-    'hr' => 'my-4 border-t border-gray-300',
-
-    // Logo and text classes
-    'logo' => 'h-16',  // Adjust the size of the logo
-    'logoWrapper' => 'flex items-center justify-between w-full mb-8',  // Flex container for logo and text
-    'logoTitle' => 'font-bold text-2xl text-gray-800',  // Styling for brand name
-    'logoSubtitle' => 'text-sm text-gray-600',  // Styling for tagline
+    // Form
+    'heading'       => 'text-lg font-medium text-gray-700 text-center mb-6',
+    'form'          => 'space-y-4',
+    'form_input'    => 'w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500',
+    'submit_button' => 'w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md transition-colors',
+    'forgot_link'   => 'text-sm text-blue-600 hover:underline',
 ];
