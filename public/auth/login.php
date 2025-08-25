@@ -34,7 +34,7 @@ if (empty($_SESSION['csrf'])) {
 
         <h2 class="<?php echo $loginStyle['heading']; ?>">Log in to your account</h2>
 
-        <form action="/trms/app/auth-handler/login-handler.php" method="POST" class="<?php echo $loginStyle['form']; ?>">
+        <form action="login-handler.php" method="POST" class="<?php echo $loginStyle['form']; ?>">
             <!-- Hidden CSRF token field -->
             <input type="hidden" name="csrf" value="<?= htmlspecialchars($_SESSION['csrf'], ENT_QUOTES, 'UTF-8') ?>">
 
